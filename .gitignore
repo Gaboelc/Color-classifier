@@ -40,3 +40,6 @@ pip-selfcheck.json
 
 ### VisualStudioCode ###
 .vscode/*
+
+### color_bot ###
+color_data/
