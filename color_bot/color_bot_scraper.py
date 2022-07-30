@@ -38,26 +38,38 @@ class color_bot:
             return self.blackGray_table, self.blue_table, self.brown_table, self.green_table, self.orange_table, self.red_table, self.violet_table, self.white_table, self.yellow_table, self.metal_table
 
 
-    def export_tables(self, path=''):
+    def export_tables(self, path='', metadata=False):
         '''
         Export all tables as csv\n
         parameters:\n
 			path: String parameter, Specify the path in which the files will be exported.
+            metadata: Boolean parameter, decide whether to export the metadata lists. Default: False
 		return:
 			None
         '''
-        
-        self.blackGray_table.to_csv(path + 'Black_gray.csv')
-        self.blue_table.to_csv(path + 'Blue.csv')
-        self.brown_table.to_csv(path + 'Brown.csv')
-        self.green_table.to_csv(path + 'Green.csv')
-        self.orange_table.to_csv(path + 'Orange.csv')
-        self.red_table.to_csv(path + 'Red.csv')
-        self.violet_table.to_csv(path + 'Violet.csv')
-        self.white_table.to_csv(path + 'White.csv')
-        self.yellow_table.to_csv(path + 'Yellow.csv')
-        self.metal_table.to_csv(path + 'Metal_colors.csv')
-        self.metaData_table.to_csv(path + 'Meta_data.csv')
-        self.creditsMetaData_table.to_csv(path + 'Credits_meta_data.csv')
+        if metadata == True:
+            self.blackGray_table.to_csv(path + 'Black_gray.csv')
+            self.blue_table.to_csv(path + 'Blue.csv')
+            self.brown_table.to_csv(path + 'Brown.csv')
+            self.green_table.to_csv(path + 'Green.csv')
+            self.orange_table.to_csv(path + 'Orange.csv')
+            self.red_table.to_csv(path + 'Red.csv')
+            self.violet_table.to_csv(path + 'Violet.csv')
+            self.white_table.to_csv(path + 'White.csv')
+            self.yellow_table.to_csv(path + 'Yellow.csv')
+            self.metal_table.to_csv(path + 'Metal_colors.csv')
+            self.metaData_table.to_csv(path + 'Meta_data.csv')
+            self.creditsMetaData_table.to_csv(path + 'Credits_meta_data.csv')
+        else:
+            self.blackGray_table.to_csv(path + 'Black_gray.csv')
+            self.blue_table.to_csv(path + 'Blue.csv')
+            self.brown_table.to_csv(path + 'Brown.csv')
+            self.green_table.to_csv(path + 'Green.csv')
+            self.orange_table.to_csv(path + 'Orange.csv')
+            self.red_table.to_csv(path + 'Red.csv')
+            self.violet_table.to_csv(path + 'Violet.csv')
+            self.white_table.to_csv(path + 'White.csv')
+            self.yellow_table.to_csv(path + 'Yellow.csv')
+            self.metal_table.to_csv(path + 'Metal_colors.csv')
         
         print('All files were exported!')
