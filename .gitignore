@@ -37,6 +37,10 @@ ipython_config.py
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+Lib/*.py
 
 ### VisualStudioCode ###
 .vscode/*
+
+### Data ###
+color_data/*.csv
